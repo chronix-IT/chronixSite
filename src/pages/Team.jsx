@@ -1,21 +1,27 @@
 const team = [
   {
     initial: 'K',
-    name: 'Kiano',
+    name: 'Kiano Polet',
     role: 'Co-Founder & Developer',
     bio: 'Bio coming soon.',
+    github: 'https://github.com/kpolet2010-hue',
+    linkedin: 'https://www.linkedin.com/in/kiano-polet-10ba1b3bb/',
   },
   {
     initial: 'D',
-    name: 'David',
+    name: 'David Krnetic',
     role: 'Co-Founder & Developer',
     bio: 'Bio coming soon.',
+    github: 'https://github.com/Krneee',
+    linkedin: '',
   },
   {
     initial: 'T',
-    name: 'TJ',
+    name: 'Tyron Jeremy Kordon',
     role: 'Co-Founder & Developer',
     bio: 'Bio coming soon.',
+    github: 'https://github.com/Tyron-Kordon',
+    linkedin: 'https://www.linkedin.com/in/tyron-kordon-8b223b3b5/',
   },
 ]
 
@@ -74,20 +80,28 @@ export default function Team() {
             </p>
             <p className="text-slate-400 mb-6 leading-relaxed">{member.bio}</p>
             <div className="flex gap-4 mt-auto">
-              <a
-                href="#"
-                aria-label={`${member.name} on GitHub`}
-                className="text-slate-400 hover:text-chronix-glow transition-colors"
-              >
-                <GitHubIcon />
-              </a>
-              <a
-                href="#"
-                aria-label={`${member.name} on LinkedIn`}
-                className="text-slate-400 hover:text-chronix-glow transition-colors"
-              >
-                <LinkedInIcon />
-              </a>
+              {member.github && (
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${member.name} on GitHub`}
+                  className="text-slate-400 hover:text-chronix-glow transition-colors"
+                >
+                  <GitHubIcon />
+                </a>
+              )}
+              {member.linkedin && (
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${member.name} on LinkedIn`}
+                  className="text-slate-400 hover:text-chronix-glow transition-colors"
+                >
+                  <LinkedInIcon />
+                </a>
+              )}
             </div>
           </article>
         ))}
