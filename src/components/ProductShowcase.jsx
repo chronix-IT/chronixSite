@@ -1,4 +1,4 @@
-import { Component, useMemo, useRef } from 'react'
+import { Component, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, RoundedBox, Sparkles } from '@react-three/drei'
@@ -63,7 +63,23 @@ function buildPins() {
   return pins
 }
 
-function Core() {
+function useChipScale() {
+  const getScale = () => {
+    const w = window.innerWidth
+    if (w < 430) return 0.58
+    if (w < 1024) return 0.76
+    return 1
+  }
+  const [scale, setScale] = useState(getScale)
+  useEffect(() => {
+    const handle = () => setScale(getScale())
+    window.addEventListener('resize', handle)
+    return () => window.removeEventListener('resize', handle)
+  }, [])
+  return scale
+}
+
+function Core({ scale = 1 }) {
   const groupRef = useRef()
   const dieRef = useRef()
   const traceRefs = useRef([])
@@ -104,7 +120,7 @@ function Core() {
   })
 
   return (
-    <group ref={groupRef}>
+    <group ref={groupRef} scale={scale}>
       <Float speed={0.9} rotationIntensity={0.15} floatIntensity={0.45}>
         {/* Chip package — flat dark substrate */}
         <RoundedBox args={[PKG_SIZE, PKG_HEIGHT, PKG_SIZE]} radius={0.04} smoothness={4}>
@@ -194,7 +210,7 @@ function Core() {
   )
 }
 
-function FallbackCore() {
+function FallbackCore({ scale = 1 }) {
   const meshRef = useRef()
   useFrame((state) => {
     if (meshRef.current) {
@@ -202,7 +218,7 @@ function FallbackCore() {
     }
   })
   return (
-    <mesh ref={meshRef}>
+    <mesh ref={meshRef} scale={scale}>
       <icosahedronGeometry args={[1.4, 1]} />
       <meshStandardMaterial
         color="#1e6fff"
@@ -233,8 +249,10 @@ function ParticleField() {
 }
 
 export default function ProductShowcase() {
+  const chipScale = useChipScale()
+
   return (
-    <section className="relative w-full h-[90vh] min-h-[640px] overflow-hidden border-y border-chronix-blue/30">
+    <section className="relative w-full h-[55vh] sm:h-[70vh] md:h-[90vh] min-h-[360px] sm:min-h-[480px] md:min-h-[640px] overflow-hidden border-y border-chronix-blue/30">
       {/* Atmospheric backdrop */}
       <div
         aria-hidden
@@ -254,19 +272,25 @@ export default function ProductShowcase() {
         }}
       />
 
-      <Canvas camera={{ position: [0, 0, 6.2], fov: 42 }} dpr={[1, 2]}>
+      <Canvas
+        camera={{ position: [0, 0, 6.2], fov: 42 }}
+        dpr={[1, 2]}
+        onCreated={({ gl }) => {
+          gl.domElement.addEventListener('webglcontextlost', (e) => e.preventDefault(), false)
+        }}
+      >
         <ambientLight intensity={0.25} />
         <pointLight position={[6, 4, 5]} intensity={3.2} color="#4d9fff" />
         <pointLight position={[-6, -3, 4]} intensity={2.4} color="#1e6fff" />
         <pointLight position={[0, -5, -4]} intensity={1.8} color="#7ab8ff" />
-        <CanvasErrorBoundary fallback={<FallbackCore />}>
-          <Core />
+        <CanvasErrorBoundary fallback={<FallbackCore scale={chipScale} />}>
+          <Core scale={chipScale} />
         </CanvasErrorBoundary>
         <ParticleField />
       </Canvas>
 
       {/* Overlay UI */}
-      <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-6 md:p-12">
+      <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 sm:p-6 md:p-12">
         <div className="flex items-start justify-between gap-6">
           <div>
             <h2 className="font-mono text-4xl md:text-6xl lg:text-7xl text-chronix-glow text-glow tracking-wider leading-none">
