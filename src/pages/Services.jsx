@@ -122,7 +122,7 @@ export default function Services() {
             Klar, direkt und ohne Überraschungen — so läuft ein Projekt mit Chronix ab.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {steps.map((step, i) => (
             <div key={step.number} className="relative">
               {i < steps.length - 1 && (

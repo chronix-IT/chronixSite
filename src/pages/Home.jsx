@@ -73,7 +73,7 @@ export default function Home() {
         <p className="text-xs tracking-[0.4em] text-chronix-accent uppercase mb-6 opacity-80">
           IT Solutions · Next Generation
         </p>
-        <h1 className="font-mono text-5xl md:text-7xl tracking-widest text-chronix-glow text-glow leading-tight">
+        <h1 className="font-mono text-4xl sm:text-5xl md:text-7xl tracking-widest text-chronix-glow text-glow leading-tight">
           CHRONIX
         </h1>
         <p className="mt-6 text-slate-300 text-xl md:text-2xl max-w-2xl leading-relaxed">

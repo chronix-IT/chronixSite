@@ -172,7 +172,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="font-mono tracking-widest text-sm px-8 py-4 bg-chronix-accent text-white hover:bg-chronix-accent/80 hover:shadow-glow-strong rounded transition-all self-start"
+                className="font-mono tracking-widest text-sm px-8 py-4 bg-chronix-accent text-white hover:bg-chronix-accent/80 hover:shadow-glow-strong rounded transition-all w-full sm:w-auto"
               >
                 NACHRICHT SENDEN →
               </button>

@@ -25,7 +25,7 @@ export default function OS() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-20">
       <section className="text-center mb-20">
-        <h1 className="font-mono text-5xl md:text-6xl text-chronix-glow text-glow mb-6">
+        <h1 className="font-mono text-4xl md:text-5xl lg:text-6xl text-chronix-glow text-glow mb-6">
           ChronixOS
         </h1>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto">
