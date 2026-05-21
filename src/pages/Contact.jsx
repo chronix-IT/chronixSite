@@ -8,8 +8,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'E-Mail',
-    value: 'contact@chronix.dev',
-    href: 'mailto:contact@chronix.dev',
+    value: 'chronix.it@gmail.com',
+    href: 'mailto:chronix.it@gmail.com',
   },
   {
     icon: (
