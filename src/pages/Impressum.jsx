@@ -18,8 +18,8 @@ export default function Impressum() {
           <h2 className="font-mono text-lg text-chronix-glow mb-3">Kontakt</h2>
           <p>
             E-Mail:{' '}
-            <a href="mailto:contact@chronix.dev" className="text-chronix-accent hover:text-glow transition-all">
-              contact@chronix.dev
+            <a href="mailto:chronix.it@gmail.com" className="text-chronix-accent hover:text-glow transition-all">
+              chronix.it@gmail.com
             </a>
           </p>
         </section>

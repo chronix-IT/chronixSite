@@ -1,3 +1,5 @@
+import tyronImg from '../assets/TyronJeremyKordonPic.jpg'
+
 const team = [
   {
     initial: 'K',
@@ -20,6 +22,7 @@ const team = [
     name: 'Tyron Jeremy Kordon',
     role: 'Co-Founder & Developer',
     bio: 'Bio coming soon.',
+    image: tyronImg,
     github: 'https://github.com/Tyron-Kordon',
     linkedin: 'https://www.linkedin.com/in/tyron-kordon-8b223b3b5/',
   },
@@ -69,9 +72,17 @@ export default function Team() {
             key={member.name}
             className="border border-chronix-blue/40 hover:border-chronix-accent bg-chronix-navy/30 hover:bg-chronix-navy/60 hover:shadow-glow-blue transition-all duration-300 rounded-lg p-8 text-center flex flex-col items-center"
           >
-            <div className="w-24 h-24 rounded-full bg-chronix-accent flex items-center justify-center font-mono text-4xl text-white mb-6 shadow-glow-blue">
-              {member.initial}
-            </div>
+            {member.image ? (
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-24 h-24 rounded-full object-cover mb-6 shadow-glow-blue"
+              />
+            ) : (
+              <div className="w-24 h-24 rounded-full bg-chronix-accent flex items-center justify-center font-mono text-4xl text-white mb-6 shadow-glow-blue">
+                {member.initial}
+              </div>
+            )}
             <h2 className="font-mono text-2xl text-chronix-glow mb-1">
               {member.name}
             </h2>

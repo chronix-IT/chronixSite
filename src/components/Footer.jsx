@@ -32,10 +32,10 @@ export default function Footer() {
             Professionelle IT-Lösungen für Unternehmen, die vorankommen wollen.
           </p>
           <a
-            href="mailto:contact@chronix.dev"
+            href="mailto:chronix.it@gmail.com"
             className="text-chronix-accent text-sm hover:text-glow transition-all"
           >
-            contact@chronix.dev
+            chronix.it@gmail.com
           </a>
         </div>
 
@@ -62,10 +62,10 @@ export default function Footer() {
           <div className="flex flex-col gap-3 text-sm text-slate-400">
             <p>Antwort innerhalb von 24 Stunden</p>
             <a
-              href="mailto:contact@chronix.dev"
+              href="mailto:chronix.it@gmail.com"
               className="text-chronix-glow hover:text-glow transition-all"
             >
-              contact@chronix.dev
+              chronix.it@gmail.com
             </a>
             <Link
               to="/kontakt"

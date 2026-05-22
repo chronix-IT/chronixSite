@@ -13,8 +13,8 @@ export default function Datenschutz() {
             [PLZ Ort]<br />
             Deutschland<br />
             E-Mail:{' '}
-            <a href="mailto:contact@chronix.dev" className="text-chronix-accent hover:text-glow transition-all">
-              contact@chronix.dev
+            <a href="mailto:chronix.it@gmail.com" className="text-chronix-accent hover:text-glow transition-all">
+              chronix.it@gmail.com
             </a>
           </p>
         </section>
@@ -62,8 +62,8 @@ export default function Datenschutz() {
           <p>
             Du hast gemäß DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
             Datenübertragbarkeit und Widerspruch. Zur Ausübung deiner Rechte wende dich an:{' '}
-            <a href="mailto:contact@chronix.dev" className="text-chronix-accent hover:text-glow transition-all">
-              contact@chronix.dev
+            <a href="mailto:chronix.it@gmail.com" className="text-chronix-accent hover:text-glow transition-all">
+              chronix.it@gmail.com
             </a>
           </p>
           <p className="mt-3">

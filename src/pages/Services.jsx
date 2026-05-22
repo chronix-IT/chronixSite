@@ -154,10 +154,10 @@ export default function Services() {
             JETZT ANFRAGEN →
           </Link>
           <a
-            href="mailto:contact@chronix.dev"
+            href="mailto:chronix.it@gmail.com"
             className="inline-block font-mono tracking-widest text-sm px-8 py-4 border border-chronix-blue/50 text-chronix-glow hover:border-chronix-accent hover:bg-chronix-accent/10 rounded transition-all"
           >
-            contact@chronix.dev
+            chronix.it@gmail.com
           </a>
         </div>
       </section>
