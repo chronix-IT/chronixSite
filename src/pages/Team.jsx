@@ -1,4 +1,5 @@
 import tyronImg from '../assets/TyronJeremyKordonPic.jpg'
+import kianoImg from '../assets/KianoPolet.jpg'
 
 const team = [
   {
@@ -6,6 +7,7 @@ const team = [
     name: 'Kiano Polet',
     role: 'Co-Founder & Developer',
     bio: 'Bio coming soon.',
+    image: kianoImg,
     github: 'https://github.com/kpolet2010-hue',
     linkedin: 'https://www.linkedin.com/in/kiano-polet-10ba1b3bb/',
   },
