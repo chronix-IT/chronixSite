@@ -1,5 +1,6 @@
 import tyronImg from '../assets/TyronJeremyKordonPic.jpg'
 import kianoImg from '../assets/KianoPolet.jpg'
+import davidImg from '../assets/DavidKrnetic.jpg'
 
 const team = [
   {
@@ -16,8 +17,9 @@ const team = [
     name: 'David Krnetic',
     role: 'Co-Founder & Developer',
     bio: 'Bio coming soon.',
+    image: davidImg,
     github: 'https://github.com/Krneee',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/david-krneti%C4%87-246b78419',
   },
   {
     initial: 'T',
