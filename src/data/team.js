@@ -1,4 +1,4 @@
-import tyronImg from '../assets/TyronJeremyKordonPic.jpg'
+﻿import tyronImg from '../assets/TyronJeremyKordonPic.jpg'
 import kianoImg from '../assets/KianoPolet.jpg'
 import davidImg from '../assets/DavidKrnetic.jpg'
 
@@ -22,7 +22,7 @@ export const team = [
       'Ihn treibt an, Dinge nicht nur zu verstehen, sondern praktisch nachzubauen: praktisch, lösungsorientiert und mit einem Blick fürs Ganze.',
       {
         text: 'Langfristig möchte David Krnetić sein technisches Know-how nutzen, um eigene Ideen umzusetzen und zu leiten, sei es im Rahmen seiner Ausbildung und des Unternehmens oder darüber hinaus. Dies wiederspiegelt auch sein Motto:',
-        mottoLine: '"Leadership as a Service."',
+        mottoLine: '"Leadership is a Service."',
       },
     ],
     image: davidImg,
