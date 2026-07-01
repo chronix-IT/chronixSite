@@ -108,22 +108,22 @@ export default function TeamMember() {
           Über {member.name}
         </h2>
         <div className="space-y-5 text-slate-400 leading-relaxed">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            vitae turpis sed neque facilisis gravida. Donec nec augue in lorem
-            posuere posuere. Praesent consequat, arcu vitae tincidunt placerat,
-            justo nisl luctus sem, vitae dignissim mi neque sed urna.
-          </p>
-          <p>
-            Curabitur at massa vel lacus interdum fermentum. Sed a nisl at
-            tortor pretium consequat. Morbi vitae augue non erat tristique
-            viverra. Duis non lectus ac lorem cursus tincidunt in vitae nibh.
-          </p>
-          <p>
-            Aenean finibus, ipsum sed faucibus tincidunt, justo sem gravida
-            lorem, et luctus mi neque id nibh. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas.
-          </p>
+          {(member.bio ?? [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae turpis sed neque facilisis gravida. Donec nec augue in lorem posuere posuere. Praesent consequat, arcu vitae tincidunt placerat, justo nisl luctus sem, vitae dignissim mi neque sed urna.',
+            'Curabitur at massa vel lacus interdum fermentum. Sed a nisl at tortor pretium consequat. Morbi vitae augue non erat tristique viverra. Duis non lectus ac lorem cursus tincidunt in vitae nibh.',
+            'Aenean finibus, ipsum sed faucibus tincidunt, justo sem gravida lorem, et luctus mi neque id nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+          ]).map((paragraph) => (
+            typeof paragraph === 'string' ? (
+              <p key={paragraph}>{paragraph}</p>
+            ) : (
+              <p key={paragraph.text}>
+                {paragraph.text}
+                <span className="block italic whitespace-nowrap mt-2 text-slate-300">
+                  {paragraph.mottoLine}
+                </span>
+              </p>
+            )
+          ))}
         </div>
       </section>
     </div>
