@@ -1,36 +1,5 @@
-import tyronImg from '../assets/TyronJeremyKordonPic.jpg'
-import kianoImg from '../assets/KianoPolet.jpg'
-import davidImg from '../assets/DavidKrnetic.jpg'
-
-const team = [
-  {
-    initial: 'K',
-    name: 'Kiano Polet',
-    role: 'Co-Founder & Developer',
-    bio: 'Bio coming soon.',
-    image: kianoImg,
-    github: 'https://github.com/kpolet2010-hue',
-    linkedin: 'https://www.linkedin.com/in/kiano-polet-10ba1b3bb/',
-  },
-  {
-    initial: 'D',
-    name: 'David Krnetic',
-    role: 'Co-Founder & Developer',
-    bio: 'Bio coming soon.',
-    image: davidImg,
-    github: 'https://github.com/Krneee',
-    linkedin: 'https://www.linkedin.com/in/david-krneti%C4%87-246b78419',
-  },
-  {
-    initial: 'T',
-    name: 'Tyron Jeremy Kordon',
-    role: 'Co-Founder & Developer',
-    bio: 'Bio coming soon.',
-    image: tyronImg,
-    github: 'https://github.com/Tyron-Kordon',
-    linkedin: 'https://www.linkedin.com/in/tyron-kordon-8b223b3b5/',
-  },
-]
+import { Link } from 'react-router-dom'
+import { team } from '../data/team'
 
 function GitHubIcon() {
   return (
@@ -76,24 +45,18 @@ export default function Team() {
             key={member.name}
             className="border border-chronix-blue/40 hover:border-chronix-accent bg-chronix-navy/30 hover:bg-chronix-navy/60 hover:shadow-glow-blue transition-all duration-300 rounded-lg p-8 text-center flex flex-col items-center"
           >
-            {member.image ? (
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-24 h-24 rounded-full object-cover mb-6 shadow-glow-blue"
-              />
-            ) : (
-              <div className="w-24 h-24 rounded-full bg-chronix-accent flex items-center justify-center font-mono text-4xl text-white mb-6 shadow-glow-blue">
-                {member.initial}
-              </div>
-            )}
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-24 h-24 rounded-full object-cover mb-6 shadow-glow-blue"
+            />
             <h2 className="font-mono text-2xl text-chronix-glow mb-1">
               {member.name}
             </h2>
             <p className="text-chronix-accent text-sm tracking-wide mb-4">
               {member.role}
             </p>
-            <p className="text-slate-400 mb-6 leading-relaxed">{member.bio}</p>
+            <p className="text-slate-400 mb-6 leading-relaxed">{member.motto}</p>
             <div className="flex gap-4 mt-auto">
               {member.github && (
                 <a
@@ -118,6 +81,12 @@ export default function Team() {
                 </a>
               )}
             </div>
+            <Link
+              to={`/team/${member.slug}`}
+              className="mt-6 font-mono text-xs tracking-widest px-4 py-2 border border-chronix-blue/50 text-chronix-glow hover:border-chronix-accent hover:bg-chronix-accent/10 hover:shadow-glow-blue rounded transition-all"
+            >
+              PROFIL
+            </Link>
           </article>
         ))}
       </section>

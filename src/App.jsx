@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import OS from './pages/OS'
 import Services from './pages/Services'
 import Team from './pages/Team'
+import TeamMember from './pages/TeamMember'
 import Contact from './pages/Contact'
 import Impressum from './pages/Impressum'
 import Datenschutz from './pages/Datenschutz'
@@ -23,6 +24,7 @@ function App() {
             <Route path="/os" element={<OS />} />
             <Route path="/services" element={<Services />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/team/:slug" element={<TeamMember />} />
             <Route path="/kontakt" element={<Contact />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
