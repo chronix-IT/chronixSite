@@ -34,6 +34,14 @@ export const team = [
     name: 'Tyron Jeremy Kordon',
     role: 'Co-Founder, CMO & Developer',
     motto: 'Walk your own Path.',
+    bio: [
+      'Tyron Jeremy Kordon ist am 30. August 2009 geboren und absolviert derzeit eine Lehre als Applikationsentwickler. Bereits während seiner Ausbildung hat er in zahlreichen Projekten mitgewirkt und dabei fundierte praktische Erfahrung in der Softwareentwicklung gesammelt.',
+      'Er zeichnet sich durch eine ausgeprägte Teamfähigkeit aus und bringt sein technisches Know-how gezielt in die gemeinsame Projektarbeit ein. Für ihn steht dabei stets im Vordergrund, hochwertige und durchdachte Software zu entwickeln, die echten Mehrwert schafft.',
+      {
+        text: 'Getrieben von der Leidenschaft, stetig dazuzulernen und sein Wissen praktisch anzuwenden, verfolgt Tyron Jeremy Kordon konsequent seinen eigenen Weg, sei es in der Ausbildung, im Unternehmen oder in persönlichen Projekten. Dies spiegelt sich auch in seinem Motto wider:',
+        mottoLine: '"Walk your own Path."',
+      },
+    ],
     image: tyronImg,
     github: 'https://github.com/Tyron-Kordon',
     linkedin: 'https://www.linkedin.com/in/tyron-kordon-8b223b3b5/',
